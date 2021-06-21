@@ -1,11 +1,12 @@
 import React from 'react';
+import JournalContainer from '../containers/JournalContainer';
 
-const Journal = () => {
-  return (
-    <h2>
-      this is the journal page
-    </h2>
+function JournalPage(props) {
+  return(
+    <>
+      <JournalContainer entries={props.entries}/>
+    </>  
   );
-};
+}
 
-export default Journal;
+export default JournalPage;
