@@ -1,34 +1,44 @@
-import React from 'react';
+import React, { Component } from 'react';
 import moment from 'moment';
+import EditEntry from './EditEntry';
 
 class JournalEntry extends React.Component {
     state = {
         isEditClicked: false,
         title: '',
         content: '',
-        formStyle: {
-            display: 'none',
-        },
     };
 
-
-    toggleBodyForm = () => {
-        this.state.formStyle.display === 'block'
-        ?    this.setState({ formStyle: {display: 'none'} })
-        :    this.setState({ formStyle: {display: 'block'} });
+    constructor(props) {
+        super(props);
+        this.state = {
+            formStyle: {
+                display: 'none',
+            },
+        };
     };
+
 
     deleteClickedEntry = (event) => {
         console.log(this.props.journalentry._id);
         this.props.deleteEntry(this.props.journalentry._id);
     }
     
-    handleClick = (event) => {
+    toggleBodyForm = () => {
         this.setState({
             isEditClicked: true
         })
-        console.log('Update JournalContainer state');
-    }
+        this.state.formStyle.display === 'block'
+        ? this.setState({ formStyle: {display: 'none'} })
+        : this.setState({ formStyle: {display: 'block'} });
+    };
+
+    // handleClick = (event) => {
+    //     this.setState({
+    //         isEditClicked: true
+    //     })
+    //     console.log('Edit JournalContainer state');
+    // }
 
     render() {
         let momentDate = moment(this.props.journalentry.createdAt);
@@ -45,22 +55,19 @@ class JournalEntry extends React.Component {
                 </div>
                 <div className="column entry-buttons">
                     <label htmlFor="">Date: {relativeDate}</label>
-                    <button onClick={this.handleClick}>Edit</button>
+                    <button onClick={this.toggleBodyForm}>Edit</button>
                     <button onClick={this.deleteClickedEntry}>Delete</button>
-                </div>
+                </div>            
                 <EditForm
-                    edit={this.props.edit}
+                    journalentries={this.props.journalentries}
                     style={this.state.formStyle}
                     autoFocus={true}
                     buttonName="Update Entry"
-                    updateEntry={this.props.updateEntry}
-                    toggleBodyForm={this.toggleBodyForm} />
-                
+                    editEntry={this.props.editEntry}
+                    toggleBodyForm={this.toggleBodyForm} />       
             </div>
         );
     }
 };
-
-
 
 export default JournalEntry;

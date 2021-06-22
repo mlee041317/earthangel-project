@@ -4,22 +4,22 @@ class EditEntry extends Component {
     constructor() {
         super();
         this.state = {
-            edit: '',
+            journalentries: '',
         };
     };
 
     onChange = (event) => {
         this.setState({
-            edit: event.target.value,
+            journalentries: event.target.value,
         });
     };
 
     onSubmit = (event) => {
         event.preventDefault();
-        const edit = this.props.edit;
-        edit.body = this.state.edit;
-        this.props.updateEntry(entry);
-        this.setState({ edit: '' });
+        const journalentries = this.props.journalentries;
+        journalentries.body = this.state.journalentries;
+        this.props.editEntry(entry);
+        this.setState({ journalentries: '' });
         this.props.toggleBodyForm();
     };
 
@@ -32,7 +32,7 @@ class EditEntry extends Component {
                         onChange={ this.onChange }
                         placeholder="Let's reflect..."
                         type='text'
-                        value={this.state.edit} />
+                        value={this.state.journalentries} />
                     <button type='submit'>Save</button>    
                 </form>
             </div>

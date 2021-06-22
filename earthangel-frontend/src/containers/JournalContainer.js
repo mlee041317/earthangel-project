@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CreateEntry from '../components/CreateEntry';
+// import EditEntry from '../components/EditEntry';
 import JournalEntries from '../components/JournalEntries';
 
 class JournalContainer extends Component {
