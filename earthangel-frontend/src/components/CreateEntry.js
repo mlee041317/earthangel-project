@@ -15,18 +15,9 @@ class CreateEntry extends Component {
     onEntrySubmit = (event) => {
         event.preventDefault()
         let journalEntry = this.state;
-        console.log('entryId in CreateEntry', this.props.entryId)
         console.log('journalEntry in CreateEntry', journalEntry)
         
-        this.props.createEntry(journalEntry)
-        .then( () => {
-            this.setState({
-                title: '',
-                content: '',
-            })
-        }).catch((err) => {
-            console.err('Failed to post entry');
-        })
+        this.props.createJournalEntry(journalEntry)
     }
 
         render(){

@@ -10,17 +10,18 @@ class JournalEntries extends React.Component {
         <JournalEntry
                 key={journalentry._id}
                 journalentry={journalentry}
-                deleteEntry={this.props.deleteEntry}        
+                deleteEntry={this.props.deleteEntry} 
+                editEntry={this.props.editEntry}       
             />)
 
         })
 
-        return (
-            <ul>
-                {journalentries}
-            </ul>
-        )
+            return (
+                <ul>
+                    {journalentries}
+                </ul>
+            )
+        }
     }
-}
 
 export default JournalEntries; 

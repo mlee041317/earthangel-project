@@ -1,14 +1,25 @@
 import React from 'react';
-var moment = require('moment');
+import moment from 'moment';
 
 class JournalEntry extends React.Component {
     state = {
         isEditClicked: false,
         title: '',
         content: '',
-    }
+        formStyle: {
+            display: 'none',
+        },
+    };
+
+
+    toggleBodyForm = () => {
+        this.state.formStyle.display === 'block'
+        ?    this.setState({ formStyle: {display: 'none'} })
+        :    this.setState({ formStyle: {display: 'block'} });
+    };
 
     deleteClickedEntry = (event) => {
+        console.log(this.props.journalentry._id);
         this.props.deleteEntry(this.props.journalentry._id);
     }
     
@@ -35,12 +46,21 @@ class JournalEntry extends React.Component {
                 <div className="column entry-buttons">
                     <label htmlFor="">Date: {relativeDate}</label>
                     <button onClick={this.handleClick}>Edit</button>
-                    <button onClick={this.deleteClickedPost}>Delete</button>
+                    <button onClick={this.deleteClickedEntry}>Delete</button>
                 </div>
+                <EditForm
+                    edit={this.props.edit}
+                    style={this.state.formStyle}
+                    autoFocus={true}
+                    buttonName="Update Entry"
+                    updateEntry={this.props.updateEntry}
+                    toggleBodyForm={this.toggleBodyForm} />
                 
             </div>
-        )
+        );
     }
-}
+};
+
+
 
 export default JournalEntry;

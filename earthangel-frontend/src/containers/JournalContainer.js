@@ -6,30 +6,49 @@ class JournalContainer extends Component {
     state= {
         name: '',
         posts: '',
+        journalentries: [],
     }
 
-    createJournalEntry = () => {
-        let currentJournalEntries = this.state.entries;
-        currentEntries.push(newJournalEntry);
+    createJournalEntry = (journalentry) => {
+        console.log('createJournalEntry ===> ');
+        let currentJournalEntries = this.state.journalentries;
+        //DELETE LINE 16 WHEN DB IS SENT IN.
+        journalentry._id = Date.now()
+        currentJournalEntries.push(journalentry);
         this.setState({
-            entry: currentJournalEntries
+            journalentries: currentJournalEntries
         });
     }
 
-    deleteEntry = () => {
-        let updatedEntries = this.state.entries.filter((entry) => {
-            return entry._id !== deletedEntry._id;
+    deleteEntry = (id) => {
+        console.log('deleteEntry ===> ', id);
+        let updatedJournalEntries = this.state.journalentries.filter((entry) => {
+            return entry._id !== id;
         });
         this.setState({
-            entries: updatedEntries
+            journalentries: updatedJournalEntries
         })
     }
+
+    editEntry = (journalentry) => {
+        const isEditedEntry = t => {
+            return t._id === journalentry._id;  
+        };
+        // JournalModel.update(journalentry)
+        //     .then((res) => {
+                let journalentries = this.state.journalentries;
+                journalentries.find(isEditedEntry).body = journalentry.body;
+                this.setState({ journalentries: journalentries });
+            // });
+    };
+
 
     render() {
         return(
             <main>
-                <JournalEntries journalentries={this.state.entries} deleteEntry={this.deleteEntry}/>
-                <CreateEntry entryId={this.props.entryId} createEntryPost={this.createEntryPost}/>
+                <JournalEntries journalentries={this.state.journalentries} deleteEntry={this.deleteEntry}/>
+                <JournalEntries journalentries={this.state.journalentries} editEntry={this.editEntry}/>
+                <CreateEntry entryId={this.props.entryId} createJournalEntry={this.createJournalEntry}/>
             </main>
         )
     }
