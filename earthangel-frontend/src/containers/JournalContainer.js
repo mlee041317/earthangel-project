@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import CreateEntry from '../components/CreateEntry';
-// import EditEntry from '../components/EditEntry';
 import JournalEntries from '../components/JournalEntries';
 
 class JournalContainer extends Component {
@@ -31,15 +30,18 @@ class JournalContainer extends Component {
         })
     }
 
-    editEntry = (journalentry) => {
-        const isEditedEntry = t => {
-            return t._id === journalentry._id;  
-        };
-        // JournalModel.update(journalentry)
-        //     .then((res) => {
-                let journalentries = this.state.journalentries;
-                journalentries.find(isEditedEntry).body = journalentry.body;
-                this.setState({ journalentries: journalentries });
+    editEntry = (journalentry, journalentryid) => {
+                let updatedJournalEntries = [...this.state.journalentries];
+                const editedJournal = updatedJournalEntries.find(entry => {
+                    return entry._id === journalentryid 
+                });
+                editedJournal.content = journalentry
+                updatedJournalEntries = updatedJournalEntries.filter(
+                    entry => entry._id !== editedJournal._id
+                )
+                updatedJournalEntries.push(editedJournal)
+                this.setState({ journalentries: updatedJournalEntries });
+                console.log(updatedJournalEntries);
             // });
     };
 
@@ -47,8 +49,7 @@ class JournalContainer extends Component {
     render() {
         return(
             <main>
-                <JournalEntries journalentries={this.state.journalentries} deleteEntry={this.deleteEntry}/>
-                <JournalEntries journalentries={this.state.journalentries} editEntry={this.editEntry}/>
+                <JournalEntries journalentries={this.state.journalentries} deleteEntry={this.deleteEntry} editEntry={this.editEntry}/>
                 <CreateEntry entryId={this.props.entryId} createJournalEntry={this.createJournalEntry}/>
             </main>
         )

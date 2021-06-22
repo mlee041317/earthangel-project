@@ -1,9 +1,9 @@
 body {
-  background-image: url("images/11.jpg");
+  background-image: url("images/17.jpg");
   /* background-position: center; */
   background-repeat: no-repeat;
   background-size: 100vh;
-  background-size: 100vw;
+  /* background-size: 100vw; */
   font-family: "Benne", serif;
   color: #666;
 }
@@ -17,6 +17,10 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.main-text {
+  color: red;
 }
 
 /* footer {

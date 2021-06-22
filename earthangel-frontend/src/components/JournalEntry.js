@@ -48,18 +48,17 @@ class JournalEntry extends React.Component {
             <div className="entry-box row">
                 <div className="column entry-text">
                     <div className="row entry-title">
-                        <h4>{this.props.journalentry.title}</h4>
-                        <label className="date-text" htmlFor="">Date: {relativeDate}</label>
+                        <h4>Title: {this.props.journalentry.title}</h4>
                     </div>
-                    <p>{this.props.journalentry.content}</p>
+                    <p>Body: {this.props.journalentry.content}</p>
                 </div>
                 <div className="column entry-buttons">
                     <label htmlFor="">Date: {relativeDate}</label>
                     <button onClick={this.toggleBodyForm}>Edit</button>
                     <button onClick={this.deleteClickedEntry}>Delete</button>
                 </div>            
-                <EditForm
-                    journalentries={this.props.journalentries}
+                <EditEntry
+                    journalentryid={this.props.journalentry._id}
                     style={this.state.formStyle}
                     autoFocus={true}
                     buttonName="Update Entry"
