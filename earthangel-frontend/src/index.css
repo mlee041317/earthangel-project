@@ -1,36 +1,6 @@
 body {
-  background-image: url("images/17.jpg");
-  /* background-position: center; */
+  background-image: url("images/a.jpg");
   background-repeat: no-repeat;
   background-size: 100vh;
-  /* background-size: 100vw; */
-  font-family: "Benne", serif;
-  color: #666;
+  background-size: 100vw;
 }
-nav {
-  width: 100%;
-  background: white;
-  color: black;
-  height: 10vh;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.main-text {
-  color: red;
-}
-
-/* footer {
-  width: 100%;
-  background: white;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 10vh;
-  text-align: center;
-} */
