@@ -8,9 +8,9 @@ const Header = () => {
      <Navbar bg="light" expand="lg">
      <Navbar.Brand Link to="/">EarthAngel</Navbar.Brand>
         <Link to='/'>Main</Link>
-        <Link to='/About'>About</Link>
-        <Link to='/Zodiac'>Zodiac</Link>
-        <Link to='/Journal'>Journal</Link>
+        <Link to='/about'>About</Link>
+        <Link to='/zodiac'>Zodiac</Link>
+        <Link to='/journal'>Journal</Link>
       </Navbar>
     </header>
   );

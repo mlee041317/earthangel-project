@@ -1,6 +1,8 @@
 body {
   background-image: url("images/a.jpg");
   background-repeat: no-repeat;
-  background-size: 100vh;
-  background-size: 100vw;
+  background-size: cover;
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
 }

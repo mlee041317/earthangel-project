@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import EditEntry from './EditEntry';
+import { Form, Button } from 'react-bootstrap';
 
 class JournalEntry extends React.Component {
     state = {
@@ -45,12 +46,13 @@ class JournalEntry extends React.Component {
         let relativeDate = momentDate.fromNow();
 
         return(
+
             <div className="entry-box row">
                 <div className="column entry-text">
                     <div className="row entry-title">
-                        <h4>Title: {this.props.journalentry.title}</h4>
+                        <h4>Intention Setting: {this.props.journalentry.title}</h4>
                     </div>
-                    <p>Body: {this.props.journalentry.content}</p>
+                    <p>Self-Reflection: {this.props.journalentry.content}</p>
                 </div>
                 <div className="column entry-buttons">
                     <label htmlFor="">Date: {relativeDate}</label>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Form, Button } from 'react-bootstrap';
 
 class CreateEntry extends Component {
         state = {
@@ -22,24 +23,22 @@ class CreateEntry extends Component {
 
         render(){
             return (
-            <form onSubmit={ this.onEntrySubmit } id="entryForm" className="row">
-                <div className="column entry-box">
-                    <input onChange={this.onInputChange}
-                    type="text"
-                    placeholder="Set your intentions..."
-                    value={this.state.title}
-                    name="title"
-                    />
-                    <textarea  
-                    onChange={ this.onInputChange } 
-                    type="text" id="entryContent" 
-                    placeholder="Let's reflect..." 
-                    value={this.state.content}
-                    name="content"
-                    ></textarea>
-                </div>
-                    <button type="submit" id="addEntry" className="btn">Add Entry</button>
-            </form>
+                <Form className="container" onSubmit={ this.onEntrySubmit }>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Intention Setting</Form.Label>
+                    <Form.Control type="text" name="title" onChange={this.onInputChange} placeholder="Set Your Intentions" />
+                    <Form.Text className="text-muted">
+                        It's a beautiful day to be alive.
+                    </Form.Text>
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Self Reflection</Form.Label>
+                    <Form.Control type="text" name="content" onChange={this.onInputChange} placeholder="Let's Reflect" />
+                </Form.Group>
+                <Button variant="primary" type="submit">
+                    Submit
+                </Button>
+                </Form>
 
         )
     }
