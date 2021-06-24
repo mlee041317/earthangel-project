@@ -1,12 +1,11 @@
 import React from 'react';
 import JournalContainer from '../containers/JournalContainer';
-import { Form, Button } from 'react-bootstrap';
 
 function JournalPage(props) {
   return(
-    <React.Fragment>  
+    <div className="journal-page">  
       <JournalContainer entries={props.entries}/>
-    </React.Fragment>  
+    </div>  
   );
 }
 

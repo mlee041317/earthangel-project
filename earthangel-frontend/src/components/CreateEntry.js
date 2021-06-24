@@ -30,14 +30,14 @@ class CreateEntry extends Component {
                     <Form.Text className="text-muted">
                         It's a beautiful day to be alive.
                     </Form.Text>
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Self Reflection</Form.Label>
-                    <Form.Control type="text" name="content" onChange={this.onInputChange} placeholder="Let's Reflect" />
-                </Form.Group>
-                <Button variant="primary" type="submit">
-                    Submit
-                </Button>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                        <Form.Label>Self Reflection</Form.Label>
+                        <Form.Control type="text" name="content" onChange={this.onInputChange} placeholder="Let's Reflect" />
+                    </Form.Group>
+                    <Button variant="primary" type="submit">
+                        Submit
+                    </Button>
                 </Form>
 
         )
