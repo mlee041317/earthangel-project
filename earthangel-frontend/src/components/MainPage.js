@@ -1,17 +1,18 @@
 import React from 'react';
-import { Card, Container, Row, Col, Image } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 const Main = () => {
   return (
-    <div className="main-page">
-      <Card className="container" border="dark" style={{ width: '25rem' }}>
-          <Card.Body className="main-card">
+    <div className="main-page d-flex justify-content-md-between align-items-center">
+        <Card border="dark" style={{ width: '25rem' }}>
+          <Card.Body>
             <Card.Title>What is this?</Card.Title>
               <Card.Text>
               Astrology puts our temporary bodies in context with our universe's vastness, allowing irrationality to invade our techno-rationalist ways of living.
               </Card.Text>
           </Card.Body>
-      </Card>
+        </Card>
+
       {/* <Container>
         <Row>
           <Col xs={6} md={4}>
