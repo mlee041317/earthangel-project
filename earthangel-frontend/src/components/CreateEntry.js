@@ -23,13 +23,10 @@ class CreateEntry extends Component {
 
         render(){
             return (
-                <Form className="container" onSubmit={ this.onEntrySubmit }>
+                <Form className="container d-flex justify-content-md-around align-items-center" onSubmit={ this.onEntrySubmit }>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Intention Setting</Form.Label>
                     <Form.Control type="text" name="title" onChange={this.onInputChange} placeholder="Set Your Intentions" />
-                    <Form.Text className="text-muted">
-                        It's a beautiful day to be alive.
-                    </Form.Text>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Self Reflection</Form.Label>

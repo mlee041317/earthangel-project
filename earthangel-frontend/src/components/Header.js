@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="header">
      <Navbar bg="light" expand="lg">
-     <Navbar.Brand Link to="/opening">Earthangel</Navbar.Brand>
+     <Navbar.Brand>Earthangel</Navbar.Brand>
         <Link to='/'>Main</Link>
         <Link to='/about'>About</Link>
         <Link to='/zodiac'>Zodiac</Link>

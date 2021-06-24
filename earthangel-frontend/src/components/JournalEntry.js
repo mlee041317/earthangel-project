@@ -46,38 +46,6 @@ class JournalEntry extends React.Component {
         let relativeDate = momentDate.fromNow();
 
         return(
-
-            // <Form className="container" onClick={ this.toggleBodyForm }>
-            //         <Form.Group className="mb-3" controlId="formBasicEmail">
-            //         <Form.Label>Edit</Form.Label>
-            //         <Form.Control 
-            //         type="text" 
-            //         name="title" 
-            //         onClick={this.deleteClickedEntry} 
-            //         journalentryid={this.props.journalentry._id}
-            //         placeholder="Set Your Intentions" 
-            //         />
-            //         <Form.Control 
-            //         type="date" 
-            //         date={relativeDate} 
-            //         placeholder="Posted at" 
-            //         />
-            //         </Form.Group>
-            //         <Form.Group className="mb-3" controlId="formBasicPassword">
-            //             <Form.Label>Delete</Form.Label>
-            //             <Form.Control type="text" 
-            //             name="content" 
-            //             onChange={this.onInputChange} 
-
-            //             placeholder="Let's Reflect" 
-            //             />
-            //         </Form.Group>
-            //         <Button variant="primary" type="submit">
-            //             Submit
-            //         </Button>
-            //     </Form>
-
-
             <div className="entry-box row">
                 <div className="column entry-text">
                     <div className="row entry-title">

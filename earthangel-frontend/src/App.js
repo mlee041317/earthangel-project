@@ -1,15 +1,18 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './components/Header';
 import routes from './config/routes';
 
-function App() {
+function App(props) {
+  // console.log(props);
+  const path = props.location.pathname
   return (
     <React.Fragment>
-      <Header />
+      {path !== '/' && <Header />}
       { routes }
     </React.Fragment>
   );
 };
 
-export default App;
+export default withRouter(App);

@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Benne&display=swap");
 
+.opening-page {
+  background-image: url("images/openingpage.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Benne", serif;
+}
+
+.opening-body {
+  background-color: black;
+}
+
 .header {
   font-family: "Benne", serif;
   padding: 5px;
