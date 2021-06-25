@@ -17,7 +17,6 @@ class CreateEntry extends Component {
         event.preventDefault()
         let journalEntry = this.state;
         console.log('journalEntry in CreateEntry', journalEntry)
-        
         this.props.createJournalEntry(journalEntry)
     }
 

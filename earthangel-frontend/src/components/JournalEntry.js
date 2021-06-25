@@ -56,7 +56,7 @@ class JournalEntry extends React.Component {
                 <div className="column entry-buttons">
                     <label htmlFor="">Date: {relativeDate}</label>
                     <button onClick={this.toggleBodyForm}>Edit</button>
-                    <button onClick={this.deleteClickedEntry}>Delete</button>
+                    <button onClick={() => this.deleteClickedEntry(this.props.journalentry._id)}>Delete</button>
                 </div>            
                 <EditEntry
                     journalentryid={this.props.journalentry._id}
