@@ -23,19 +23,21 @@ class CreateEntry extends Component {
 
         render(){
             return (
-                <Form className="container d-flex justify-content-md-around align-items-center" onSubmit={ this.onEntrySubmit }>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Intention Setting</Form.Label>
-                    <Form.Control type="text" name="title" onChange={this.onInputChange} placeholder="Set Your Intentions" />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label>Self Reflection</Form.Label>
-                        <Form.Control type="text" name="content" onChange={this.onInputChange} placeholder="Let's Reflect" />
-                    </Form.Group>
-                    <Button variant="primary" type="submit">
-                        Submit
-                    </Button>
-                </Form>
+                <div className="create-entry d-flex justify-content-md-end align-items-center">
+                    <Form className="container" onSubmit={ this.onEntrySubmit }>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Set your intentions</Form.Label>
+                        <Form.Control type="text" name="title" onChange={this.onInputChange} placeholder="I intend to manifest..." />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Label>Self reflection</Form.Label>
+                            <Form.Control type="text" name="content" onChange={this.onInputChange} placeholder="I am aware of..." />
+                        </Form.Group>
+                        <Button variant="dark" type="submit">
+                            enter
+                        </Button>
+                    </Form>
+                </div>
 
         )
     }

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Benne&display=swap");
 
 .opening-page {
-  background-image: url("images/openingpage.gif");
+  background-image: url("images/heart.gif");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
@@ -12,6 +12,7 @@
 
 .opening-body {
   background-color: black;
+  text-align: center;
 }
 
 .header {
@@ -31,8 +32,13 @@
   font-family: "Benne", serif;
 }
 
+.main-body {
+  text-align: right;
+  background-color: #f8f9fa;
+}
+
 .about-page {
-  background-image: url("images/14.gif");
+  background-image: url("images/aboutpage.gif");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
@@ -46,17 +52,24 @@
 }
 
 .zodiac-page {
-  background-image: url("images/1.jpg");
+  background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
   min-height: 100vh;
   margin: 0;
   font-family: "Benne", serif;
+  padding-top: 60px;
+}
+
+.stars-gif {
+  margin: auto;
+  display: block;
+  width: 60vw;
 }
 
 .journal-page {
-  background-image: url("images/14.gif");
+  background-image: url("images/4.gif");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
@@ -66,6 +79,13 @@
 }
 
 .container {
-  background-color: black;
-  padding: 10px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  margin-top: 450px;
+}
+
+.card-group {
+  min-height: 550px !important;
+  text-align: center;
+  background-color: #f8f9fa;
 }
