@@ -23,7 +23,7 @@ class CreateEntry extends Component {
         render(){
             return (
                 <div className="create-entry d-flex justify-content-md-end align-items-center">
-                    <Form className="container" onSubmit={ this.onEntrySubmit }>
+                    <Form className="container" id="create-form" onSubmit={ this.onEntrySubmit }>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Set your intentions</Form.Label>
                         <Form.Control type="text" name="title" onChange={this.onInputChange} placeholder="I intend to manifest..." />

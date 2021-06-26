@@ -9,7 +9,7 @@ const Header = () => {
      <Navbar.Brand>earth | angel</Navbar.Brand>
         <Link to='/'>Main</Link>
         <Link to='/about'>About</Link>
-        <Link to='/zodiac'>Zodiac</Link>
+        <Link to='/zodiac'>Zodiac Signs</Link>
         <Link to='/journal'>Journal</Link>
       </Navbar>
     </header>

@@ -1,11 +1,11 @@
 import React from 'react';
 import { CardColumns, Card } from 'react-bootstrap';
-import stars from '../images/stars.gif';
+import zodiacpage from '../images/zodiacpage.gif';
 
 const Zodiac = () => {
   return (
     <div className="zodiac-page">
-    <img className="stars-gif" src={ stars } />
+    <img className="stars-gif" src={ zodiacpage } />
     <div className="container">
       <CardColumns>
         <Card className="card-group">

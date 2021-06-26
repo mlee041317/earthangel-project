@@ -3,12 +3,12 @@ import { Card } from 'react-bootstrap';
 
 const About = () => {
   return (
-    <div className="about-page d-flex justify-content-md-between align-items-center">
-      <Card border="light" style={{ width: '19rem' }}>
-        <Card.Body className="about-card">
-          <Card.Title>about | earthangel</Card.Title>
+    <div className="about-page d-flex justify-content-md-around align-items-center">
+      <Card border="light ml-5 mt-5 pb-5" style={{ width: '22rem' }} id="about-card">
+        <Card.Body>
+          <Card.Title><h2>about | earthangel</h2></Card.Title>
             <Card.Text>
-            "Your conflicts, all the difficult things, the problematic situations in your life are not chance or haphazard. They are actually yours. They are specifically yours, designed specifically for you by a part of you that loves you more than anything else. The part of you that loves you more than anything else has created roadblocks to lead you to yourself. You are not going in the right direction unless there is something pricking you in the side, telling you "Look here, this way!" That part of you loves you so much that it doesn't want you to lose the chance. It will go to extreme measures to wake you up, it will make you suffer greatly if you don't listen. What else can it do? That is its purpose."
+            The social media ascendance of mystics, angels, and the #EarthAngelofInstagram is one of the greatest uses of Internet of our time — period. One of the most enchanting of them all is Michelle — also know as @theearthangel — who delivers a heady mix of astrology knowledge, mystical visuals, self-care wisdom, and some legit #bigangelenergy on her website. 
             </Card.Text>
         </Card.Body>
     </Card>

@@ -23,17 +23,18 @@ class EditEntry extends Component {
 
     render() {
         return (
-            <div style={this.props.style} className='editForm'>
-                <form onSubmit={ this.onSubmit }>
-                    <input
-                        autoFocus={this.props.autoFocus}
-                        onChange={ this.onChange }
-                        placeholder="Let's reflect..."
-                        type='text'
-                        value={this.state.journalentry} />
-                    <button type='submit'>Save</button>    
-                </form>
-            </div>
+                    <div style={this.props.style} className='editForm'>
+                        <form onSubmit={ this.onSubmit }>
+                            <input
+                                autoFocus={this.props.autoFocus}
+                                onChange={ this.onChange }
+                                placeholder="Let's reflect..."
+                                type='text'
+                                value={this.state.journalentry} />
+                            <button type='submit'>Save</button>    
+                        </form>
+                    </div>
+        
         );
     };  
 }
