@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-
 const Opening = () => {
   return (
     <div className="opening-page d-flex justify-content-md-top align-items-center">
