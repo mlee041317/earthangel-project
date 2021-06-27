@@ -25,14 +25,14 @@ class CreateEntry extends Component {
                 <div className="create-entry d-flex justify-content-md-end align-items-center">
                     <Form className="container" id="create-form" onSubmit={ this.onEntrySubmit }>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Set your intentions</Form.Label>
+                        <Form.Label id="journal-title">Set your intentions</Form.Label>
                         <Form.Control type="text" name="title" onChange={this.onInputChange} placeholder="I intend to manifest..." />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Self reflection</Form.Label>
+                            <Form.Label id="journal-content">Self reflection</Form.Label>
                             <Form.Control type="text" name="content" onChange={this.onInputChange} placeholder="I am aware of..." />
                         </Form.Group>
-                        <Button variant="dark" type="submit">
+                        <Button id="create-button" type="submit">
                             enter
                         </Button>
                     </Form>

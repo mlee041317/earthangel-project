@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
 
 const Header = () => {
   return (
-    <header className="header">
-     <Navbar bg="light" expand="lg">
-     <Navbar.Brand>earth | angel</Navbar.Brand>
+    <header>
+     <Navbar.Brand className="ml-2 mt-2"><h3>earth | angel</h3></Navbar.Brand>
+     <Nav className="justify-content-around" id="navigation">
         <Link to='/'>Main</Link>
         <Link to='/about'>About</Link>
         <Link to='/zodiac'>Zodiac Signs</Link>
         <Link to='/journal'>Journal</Link>
-      </Navbar>
+      </Nav>
     </header>
   );
 };

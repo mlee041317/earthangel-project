@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import EditEntry from './EditEntry';
-// import { Form, Button } from 'react-bootstrap';
 
 class JournalEntry extends React.Component {
     state = {
@@ -46,27 +45,27 @@ class JournalEntry extends React.Component {
         let relativeDate = momentDate.fromNow();
 
         return(
-            <div className="entry-box row">
-                <div className="column entry-text">
-                    <div className="row entry-title">
-                        <h4>Intention Setting: {this.props.journalentry.title}</h4>
-                    </div>
-                    <p>Self-Reflection: {this.props.journalentry.content}</p>
-                </div>
-                <div className="column entry-buttons">
-                    <label htmlFor="">Date: {relativeDate}</label>
-                    <button onClick={this.toggleBodyForm}>Edit</button>
-                    <button onClick={() => this.deleteClickedEntry(this.props.journalentry._id)}>Delete</button>
-                </div>            
-                <EditEntry
-                    journalentryid={this.props.journalentry._id}
-                    style={this.state.formStyle}
-                    autoFocus={true}
-                    buttonName="Update Entry"
-                    editEntry={this.props.editEntry}
-                    toggleBodyForm={this.toggleBodyForm} />       
-            </div>
-        );
+                <div className="entry-box row">
+                 <div className="column entry-text">
+                     <div className="row entry-title">
+                         <h4>Intention Setting: {this.props.journalentry.title}</h4>
+                     </div>
+                     <p>Self-Reflection: {this.props.journalentry.content}</p>
+                 </div>
+                 <div className="column entry-buttons">
+                     <label htmlFor="">Date: {relativeDate}</label>
+                     <button onClick={this.toggleBodyForm}>Edit</button>
+                     <button onClick={() => this.deleteClickedEntry(this.props.journalentry._id)}>Delete</button>
+                 </div>            
+                 <EditEntry
+                     journalentryid={this.props.journalentry._id}
+                     style={this.state.formStyle}
+                     autoFocus={true}
+                     buttonName="Update Entry"
+                     editEntry={this.props.editEntry}
+                     toggleBodyForm={this.toggleBodyForm} />       
+             </div>
+        )    
     }
 };
 

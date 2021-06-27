@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Benne&display=swap");
 
+header {
+  background: transparent;
+  opacity: 0.8;
+  color: black;
+  font-family: "Benne", serif;
+}
+
+#navigation {
+  background: transparent;
+  color: black;
+}
+
 .opening-page {
   background-image: url("images/openingpage.gif");
   background-repeat: no-repeat;
@@ -12,7 +24,7 @@
 
 .opening-body {
   text-align: left;
-  color: white;
+  color: whitesmoke;
 }
 
 #opening-card {
@@ -24,7 +36,7 @@
 .header {
   font-family: "Benne", serif;
   padding: 5px;
-  background-color: #f8f9fa;
+  background-color: whitesmoke;
 }
 
 .main-page {
@@ -41,7 +53,7 @@
 #main-card {
   text-align: left;
   background: transparent;
-  color: white;
+  color: whitesmoke;
   border: none;
 }
 
@@ -58,7 +70,7 @@
 #about-card {
   text-align: center;
   background: transparent;
-  color: white;
+  color: whitesmoke;
   border: none;
 }
 
@@ -74,33 +86,51 @@
 }
 
 .card-group {
-  min-height: 550px !important;
-  text-align: right;
-  background: transparent;
+  min-height: 450px !important;
+  text-align: center;
   opacity: 0.8;
   color: black;
 }
 
-.stars-gif {
+.maybe-gif {
   margin: auto;
   display: block;
-  width: 60vw;
+  width: 90%;
 }
 
 .journal-page {
   background-image: url("images/curves.gif");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
-  margin: 0;
   font-family: "Benne", serif;
 }
 
 #create-form {
   background: transparent;
-  color: white;
+  color: whitesmoke;
   padding: 20px;
   margin-top: 500px;
   text-align: center;
+}
+
+#journal-title {
+  background-color: black;
+  opacity: 0.9;
+  padding: 8px;
+  width: 14vw;
+}
+
+#journal-content {
+  background-color: black;
+  opacity: 0.9;
+  padding: 8px;
+  width: 14vw;
+}
+
+#create-button {
+  background-color: black;
+  opacity: 0.9;
+  border: none;
 }
