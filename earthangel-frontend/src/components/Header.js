@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header>
      <Navbar.Brand className="ml-2 mt-2"><h3>earth | angel</h3></Navbar.Brand>
-     <Nav className="justify-content-around" id="navigation">
+     <Nav className="d-flex justify-content-around">
         <Link to='/'>Main</Link>
         <Link to='/about'>About</Link>
         <Link to='/zodiac'>Zodiac Signs</Link>

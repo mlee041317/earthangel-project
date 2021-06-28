@@ -49,13 +49,15 @@ class JournalEntry extends React.Component {
         let relativeDate = momentDate.fromNow();
 
         return(
-            <Card style={{ width: '20rem' }}>
-                <Card.Body>
-                        <Card.Title><h4>Intention Setting: {this.props.journalentry.title}</h4></Card.Title>     
-                        <Card.Text><p>Self-Reflection: {this.props.journalentry.content}</p></Card.Text>                         
-                        <Card.Text><label htmlFor="">Date: {relativeDate}</label></Card.Text> 
-                        <Card.Link><button onClick={this.toggleBodyForm}>Edit</button></Card.Link>
-                        <Card.Link><button onClick={() => this.deleteClickedEntry(this.props.journalentry._id)}>Delete</button></Card.Link>
+                <Card style={{ width: '23rem' }}>
+                    <Card.Body>
+                    <Container>
+                            <Card.Title className="mt-2 ml-1"><h5>Intentions:</h5> <h6>{this.props.journalentry.title}</h6></Card.Title>     
+                            <Card.Title className="mt-2 ml-1"><h5>Self-Reflection:</h5> <h6>{this.props.journalentry.content}</h6></Card.Title>                         
+                            <Card.Text className="mt-2 ml-1"><label htmlFor="">Date: {relativeDate}</label></Card.Text> 
+                            <Card.Link><button onClick={this.toggleBodyForm}>Edit</button></Card.Link>
+                            <Card.Link><button onClick={() => this.deleteClickedEntry(this.props.journalentry._id)}>Delete</button></Card.Link>
+                    </Container>
                     <Container>           
                         <EditEntry
                             journalentryid={this.props.journalentry._id}
