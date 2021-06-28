@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Earthangel Capstone Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Earthangel
 
-## Available Scripts
+Earthangel is a website for mystics, angels, and humans all over the world that are interested in Astrology. Users of this site can create their own personal journal entries, delete, edit, and create new entries.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Opening Page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Users are greeted with a moving background, title, and a short sweet message.
+User must click enter to be brought to the main page.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## Main Page
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+On the main screen, Users will be able to navigate to the 'About Page', 'Zodiac Page', and the 'Journal Page'.
+Users are greeted with a description of what this site is about.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## About Page
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Users will be view a moving image, with a small description about the designer/programmer
+Users will have the option to navigate to a different page at the top.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Zodiac Page
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Users will be able to read and toggle between different zodiac cards to read the descriptions.
+Users will have the option to navigate to a different page at the top.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Personal Journal Page
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Users will have the option to create a personal journal post, that will ask them to fill out a form. (Self-reflection, intention setting, date is self updated once the post is submitted)
+Users will have the option to edit, and delete their posts.
+Users will have the option to navigate to a different page at the top.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Languages Used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+HTML
+CSS
+ReactJS
+React Sound
+Bootstrap
+Express
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+What was your motivation to build this project?
+App Summary
+Demo
+What is one feature you're particularly proud of? Show Code
+Challenges you faced
+Shout-outs
