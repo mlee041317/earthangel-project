@@ -11,6 +11,7 @@ function App(props) {
     <React.Fragment>
       {path !== '/' && <Header />}
       { routes }
+
       <PlaySound />
     </React.Fragment>
   );

@@ -1,12 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import moment from 'moment';
 import EditEntry from './EditEntry';
+import Card from 'react-bootstrap/Card';
+import { Container } from 'react-bootstrap';
+
 
 class JournalEntry extends React.Component {
     state = {
         isEditClicked: false,
         title: '',
         content: '',
+        journalentry: [],
     };
 
     constructor(props) {
@@ -45,26 +49,24 @@ class JournalEntry extends React.Component {
         let relativeDate = momentDate.fromNow();
 
         return(
-                <div className="entry-box row">
-                 <div className="column entry-text">
-                     <div className="row entry-title">
-                         <h4>Intention Setting: {this.props.journalentry.title}</h4>
-                     </div>
-                     <p>Self-Reflection: {this.props.journalentry.content}</p>
-                 </div>
-                 <div className="column entry-buttons">
-                     <label htmlFor="">Date: {relativeDate}</label>
-                     <button onClick={this.toggleBodyForm}>Edit</button>
-                     <button onClick={() => this.deleteClickedEntry(this.props.journalentry._id)}>Delete</button>
-                 </div>            
-                 <EditEntry
-                     journalentryid={this.props.journalentry._id}
-                     style={this.state.formStyle}
-                     autoFocus={true}
-                     buttonName="Update Entry"
-                     editEntry={this.props.editEntry}
-                     toggleBodyForm={this.toggleBodyForm} />       
-             </div>
+            <Card style={{ width: '20rem' }}>
+                <Card.Body>
+                        <Card.Title><h4>Intention Setting: {this.props.journalentry.title}</h4></Card.Title>     
+                        <Card.Text><p>Self-Reflection: {this.props.journalentry.content}</p></Card.Text>                         
+                        <Card.Text><label htmlFor="">Date: {relativeDate}</label></Card.Text> 
+                        <Card.Link><button onClick={this.toggleBodyForm}>Edit</button></Card.Link>
+                        <Card.Link><button onClick={() => this.deleteClickedEntry(this.props.journalentry._id)}>Delete</button></Card.Link>
+                    <Container>           
+                        <EditEntry
+                            journalentryid={this.props.journalentry._id}
+                            style={this.state.formStyle}
+                            autoFocus={true}
+                            buttonName="Update Entry"
+                            editEntry={this.props.editEntry}
+                            toggleBodyForm={this.toggleBodyForm} />       
+                    </Container>   
+                </Card.Body>
+            </Card> 
         )    
     }
 };
