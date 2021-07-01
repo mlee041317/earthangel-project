@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+// const endPoint = `http://localhost:4000/api/v1/entries/`;
 const endPoint = `https://earthangel.herokuapp.com/api/v1/entries/`;
 
 class JournalEntryModel {
